@@ -22,7 +22,7 @@ class Smallapp_Kafka_KafkaConsumer
         $conf->set('ssl.certificate.location', $clientPem);
         $conf->set('ssl.key.location', $clientKey);
         $conf->set('ssl.ca.location', $caPem);
-        $conf->set('receive.message.max.bytes', 5*1024*1024);
+        #$conf->set('receive.message.max.bytes', 5*1024*1024);
         $this->_consumer = new RdKafka\KafkaConsumer($conf);
         $this->_consumer->subscribe([$topic]);
     }
